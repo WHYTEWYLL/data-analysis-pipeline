@@ -59,7 +59,7 @@ def fotopeli(pelisdisponibles):
 
 def grafico(name,platform,datamovie):
     """
-
+    Generación de los plots en funcion de los parametros parseados 
     """
     if name==None:
         print(datamovie)
@@ -73,6 +73,9 @@ def grafico(name,platform,datamovie):
         fig.savefig('Output/Plot.png')
 
 def pdfecito(name,platform):
+    """
+    Creacion de pdf, con la libreia FPDF, e importación de plots generados
+    """
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
